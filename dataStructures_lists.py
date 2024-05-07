@@ -31,3 +31,5 @@ print()
 empty_list = []
 print(empty_list)
 print(type(empty_list))
+
+print(10 % 3) # Worry about this later - Just testing something
