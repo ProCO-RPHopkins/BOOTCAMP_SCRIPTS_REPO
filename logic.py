@@ -40,7 +40,6 @@ print()
 
 # Comparison operators with strings 
 # Python has case sensitivity, so upper case would not equal lower case strings
-
 a = 'cat'
 b = 'cat'
 c = 'CAT'
@@ -48,4 +47,5 @@ print(a == b != c)
 print(a > c) # This statement comes back True because lowercase values are greater in Unicode Standard
              # If I know Unicode values, 
                 # could I use different words and they come back equal as long as the values are the same?             
+print()
 print()
