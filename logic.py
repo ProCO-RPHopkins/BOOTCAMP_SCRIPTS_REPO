@@ -2,7 +2,7 @@ a = 2 + 2
 b = 4
 
 # Note that == is equal, or what is called a comparison operator
-# The = is to assign a value to a variable
+# The = is to assign a value to a variableg
 print()
 print(a == b)
 print(a >= b)
