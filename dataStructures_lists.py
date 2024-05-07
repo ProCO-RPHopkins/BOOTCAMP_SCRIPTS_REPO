@@ -31,5 +31,22 @@ print()
 empty_list = []
 print(empty_list)
 print(type(empty_list))
+print()
 
 print(10 % 3) # Worry about this later - Just testing something
+print()
+
+# modify lists
+    # length of list
+integer_list2 = [1,2,3,4,5]
+integer_length = len(integer_list2)
+print(integer_length)
+print()
+# Another option is simply to use the print function with len & list rather than assigning variable (above)
+print(len(integer_list2))
+print(integer_list2)
+print()
+
+integer_list2.append(6)
+print(integer_list2)
+print(len(integer_list2))
