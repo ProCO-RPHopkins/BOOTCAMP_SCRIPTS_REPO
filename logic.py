@@ -81,4 +81,7 @@ print(not True) # False
 print(not 5 != 6) # False
 print(not 3 * 2 == 7) # Not reverses this False statement to True
 print(not False) # True
+print(not True or False) # This is a false statement
 print()
+
+print(1 == '1') # This is a false statement

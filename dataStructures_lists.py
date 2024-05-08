@@ -50,3 +50,53 @@ print()
 integer_list2.append(6)
 print(integer_list2)
 print(len(integer_list2))
+
+# There are 11 total list methods
+#   1. append
+#   2. clear
+#   3. copy
+#   4. count
+#   5. extend
+#   6. index
+#   7. insert
+#   8. pop 
+#   9. remove
+#  10. reverse
+#  11. sort
+
+homework_list = ['journal', 'discussion post', 'discussion response', 'paper']
+homework_list.append('#appended list') # append can only take one argument
+print(homework_list)
+print()
+
+# This is another way to create variables and str lists
+jobs: list[str] = ['electrician', 'plumber', 'electrician', 'HVAC technician']
+jobs.append('mechanic')
+
+# jobs.clear()  # clears the list
+jobs_addition: list[str] = ['corn', 'plumb', 'pear']
+copy_jobs: list[str] = jobs.copy()
+electricians = jobs.count('electrician') # counts the number of occurences: In this case 2
+popped = jobs.pop(1) # If I don't add an index number, it will remove the last on the list
+
+copy_jobs.remove('HVAC technician')
+jobs.extend(jobs_addition) # add brackets to put list inside of list. Ex: jobs.extend([jobs_addition])
+jobs.insert(6, 'tractor') # Inserts it to the place number. Notice that 'plum' is +1 on the index (i.e., 7)
+jobs.remove('electrician') # Only removes one instance. Can only take one argument
+jobs.reverse() # reverses list. Notice the index number of 'plumb' changed from 5 to 2 with reversed list
+jobs.sort(key=lambda professions: professions.lower()) # automatically goes in alphabetical order
+          # The 'key' here places HVAC in alphabetical order as if 'HVAC' were lowercase.
+                # Otherwise uppercase would be at beginning of list
+                # Could create a key based on word length. Ex: jobs.sort(key=lambda professions: len(professions))
+print(jobs)
+print(copy_jobs)
+print(electricians)
+print(jobs)
+print(jobs.index('plumb')) # shows place value. Remember, index starts at 0
+print(jobs)
+print(popped)
+print(jobs)
+print(jobs)
+
+dog_list = ['pit', 'shepherd', 'bulldog', 'doberman']
+print(len(dog_list))
