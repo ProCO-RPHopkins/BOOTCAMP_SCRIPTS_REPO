@@ -85,6 +85,8 @@ shoppers_list = ["apples", "oranges", "dog", "cat", "feline", "mouse"]
 print("Shoppers List:")
 for item in shoppers_list:
     print("*"+item+"*")
+    # I can use either the one above or the one below
+    print(f"I need 5 {item}.")
 
 
 
