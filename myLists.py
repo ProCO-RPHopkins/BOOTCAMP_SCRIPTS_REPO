@@ -56,7 +56,7 @@ print("Appended List", tool_list)
 remove_item = tool_list.remove("hammer")
 print("Removed hammer from list:", tool_list)
 
-pop_tool = tool_list.pop(4)
+pop_tool = tool_list.pop(3)
 print(tool_list)
 print("The popped item is tool box:", pop_tool)
 print()
@@ -87,6 +87,8 @@ for item in shoppers_list:
     print("*"+item+"*")
     # I can use either the one above or the one below
     print(f"I need 5 {item}.")
+
+
 
 
 
