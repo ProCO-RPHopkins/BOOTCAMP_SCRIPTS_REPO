@@ -100,3 +100,26 @@ print(jobs)
 
 dog_list = ['pit', 'shepherd', 'bulldog', 'doberman']
 print(len(dog_list))
+
+# Lists out of bounds - understanding errors
+# Index range for list below: -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5
+candy = ["M&M", "Skittles", "Snickers", "Sour Worms", "Sour Lemon", "Baby Ruth"]
+
+print(len(candy))
+# print(candy[len(candy)]) # List index out of range error. This means trying to access something
+                            # outside the valid range of indices. The len of the list is 6,
+                            # but the indices only go to 5 because it begins at 0
+
+print(candy[-len(candy)]) # This statement won't give an out of range error because the len()
+                            # is negative(-), and the index begins at -1 (rather than 0).
+                            # The list then runs the full length from -1 to -6
+
+# string slicing
+print(candy[-5:-2])
+print(candy[1:]) 
+print(candy[:4])
+print(candy[1:-2])
+print(candy[-6:4])
+print(candy[4:-5]) # This returns an empty bracket. Starting index has to be less than ending index
+print(candy[-2:-5]) # Again, when I print a starting index that is greater, it'll return []
+print(candy[1:-3])
