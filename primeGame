@@ -1,0 +1,138 @@
+### Foundations of Programming: Python
+#### Prime Number Guessing Game & Pseudo Code
+---
+## Introduction
+
+**Welcome!** In this session, we will create a Prime Number Guessing Game using Python. This project will help us understand core programming concepts such as:
+
+- The `random` module
+- User input
+- Data conversion
+- Conditional statements
+- Mathematical operations
+- Boolean variables
+- Iteration and range
+- Printing messages
+- Simple game logic
+
+**Why is this important?** Understanding these concepts will help you build a strong foundation in programming.
+
+---
+## Step 1: Game Concept
+
+**Concept:** The game will randomly select a number, and you will guess whether the number is a prime number or not. You'll get feedback after each guess and your score will be tracked.
+
+**Interactive Question:** Can anyone tell me what a prime number is?
+
+---
+## Step 2: Pseudo Code
+
+Before we start coding, let's plan our game's logic with pseudo code. Pseudo code helps us structure our program without worrying about the syntax.
+
+**Pseudo Code:**
+```
+1. Import the random module
+2. Initialize the score to 0
+3. Define a function to check if a number is prime
+4. Loop to run the game:
+  a. Generate a random number
+  b. Ask the user to guess if the number is prime
+  c. Check the user's guess
+  d. Provide feedback and update the score
+  e. Ask the user if they want to play again
+5. End the game and print the final score
+```
+
+**Interactive Question:** Why do you think it's important to write pseudo code before actual coding?
+
+---
+## Step 3: Importing Modules and Setting Up Variables
+
+Let's start by importing the `random` module and setting up our initial variables.
+
+```python
+import random  # Import the random module to generate random numbers
+score = 0  # Initialize the score to keep track of correct guesses
+```
+
+**Interactive Question:** Why do we need the random module in this game?
+
+---
+## Step 4: Prime Number Check Function
+
+Next, we need a function to check if a number is prime. A prime number is a number greater than 1 that has no divisors other than 1 and itself.
+
+```python
+def is_prime(n):
+  if n <= 1:
+    return False  # Numbers less than or equal to 1 are not prime
+  for i in range(2, int(n**0.5) + 1):  # Use ** for exponentiation
+    if n % i == 0:
+      return False  # If n is divisible by any number between 2 and sqrt(n), it's not prime
+  return True  # If no divisors found, n is prime
+```
+
+**Interactive Question:** Can someone explain why we check up to the square root of `n` instead of `n` itself?
+
+---
+## Step 5: Main Game Loop
+
+Now, let's write the main loop for our game.
+
+```python
+while True:
+  number = random.randint(1, 100)  # Generate a random number between 1 and 100
+  print(f"Is {number} a prime number? (yes/no)")
+  user_input = input().strip().lower()  # Get user input and convert it to lowercase
+  if user_input not in ['yes', 'no']:
+    print("Please answer with 'yes' or 'no'.")
+    continue  # Ask again if the input is not valid
+  guess_is_prime = user_input == 'yes'  # Convert user's guess to a boolean
+  actual_is_prime = is_prime(number)  # Check if the number is actually prime
+  if guess_is_prime == actual_is_prime:
+    print("Correct!")  # User guessed correctly
+    score += 1  # Increment score
+  else:
+    print("Incorrect.")  # User guessed incorrectly
+  print(f"Your current score is: {score}")
+  print("Do you want to play again? (yes/no)")
+  play_again = input().strip().lower()  # Ask the user if they want to play again
+  if play_again != 'yes':
+    break  # Exit the loop if the user doesn't want to play again
+print(f"Thanks for playing! Your final score is: {score}")  # Print the final score
+```
+
+**Interactive Question:** What does the `continue` statement do in the loop?
+
+---
+## Step 6: Running the Game
+
+Now, let's run our game and see how it works. When the game runs, you will be asked to guess if a number is prime, and based on your input, you'll receive feedback and your score will be updated. You can keep playing as long as you want.
+
+**Interactive Question:** Let's do a quick run-through together. What do you think will happen if we guess 'yes' for the number 17?
+
+**Example Run:**
+```
+Is 17 a prime number? (yes/no)
+yes
+Correct!
+Your current score is: 1
+Do you want to play again? (yes/no)
+yes
+Is 20 a prime number? (yes/no)
+no
+Correct!
+Your current score is: 2
+Do you want to play again? (yes/no)
+no
+Thanks for playing! Your final score is: 2
+```
+
+---
+## Conclusion
+
+**Great job, everyone!** We've successfully created a Prime Number Guessing Game using Python. Through this exercise, we covered key programming concepts such as using the `random` module, handling user input, data conversion, conditional statements, mathematical operations, Boolean variables, iteration, and range, as well as printing messages and implementing simple game logic.
+
+**Remember:** Use comments in your code to explain what each part does, making it easier for others (and yourself) to understand and maintain your code in the future. Keep practicing, and you'll continue to improve your programming skills.
+
+**Questions:** Do you have any questions or need further clarification on any part of the game?
