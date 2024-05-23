@@ -1,0 +1,74 @@
+# W2D3: Foundations of Programming - Data Structures in Python
+## Introduction to Dictionaries
+### Creating a Simple Dictionary
+```python
+# Introduction to Dictionaries
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+print(my_dict)  # Outputs: {'name': 'Alice', 'age': 25, 'city': 'New York'}
+```
+### Accessing Values Using Keys
+```python
+# Accessing values using keys
+print(my_dict["name"])  # Output: Alice
+print(my_dict["age"])   # Output: 25
+```
+## Adding Items to a Dictionary
+```python
+# Adding a new key-value pair
+my_dict["email"] = "alice@example.com"
+print(my_dict)  # Outputs: {'name': 'Alice', 'age': 25, 'city': 'New York', 'email': 'alice@example.com'}
+```
+## Updating Items in a Dictionary
+```python
+# Updating an existing key-value pair
+my_dict["age"] = 26  # Assigns a new value to the key 'age'
+print(my_dict)  # Outputs the updated dictionary
+```
+## Removing Items from a Dictionary
+```python
+# Removing a key-value pair
+del my_dict["city"]
+print(my_dict)  # Outputs the dictionary without the 'city' key
+```
+## Looping Through a Dictionary
+### Looping Through Keys
+```python
+# Looping through keys
+for key in my_dict:
+    print(key)  # Outputs each key
+```
+### Looping Through Values
+```python
+# Looping through values
+for value in my_dict.values():
+    print(value)  # Outputs each value
+```
+### Looping Through Key-Value Pairs
+```python
+# Looping through key-value pairs
+for key, value in my_dict.items():
+    print(f"{key}: {value}")  # Outputs each key-value pair
+```
+## Practical Exercise
+### Create a Dictionary for a Book
+```python
+# Exercise: Create a dictionary for a book
+book = {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "year": 1960,
+    "genre": "Fiction"
+}
+# Add a new key-value pair for 'pages'
+book["pages"] = 281
+# Update the 'year' value
+book["year"] = 1961
+# Remove the 'genre' key-value pair
+del book["genre"]
+# Loop through the dictionary and print key-value pairs
+for key, value in book.items():
+    print(f"{key}: {value}")
+```
+### Student Practice
+- Create your own dictionary for a different book or another object you're interested in.
+- Practice adding, updating, removing items, and looping through the dictionary.
