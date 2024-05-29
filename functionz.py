@@ -51,7 +51,7 @@ print()
 
 def test_scope():
     local_var = " I am a local"
-    print(global_var)
+    print()
     print
 
 def outer_function(): 
