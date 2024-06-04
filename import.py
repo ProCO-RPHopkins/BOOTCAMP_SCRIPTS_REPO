@@ -20,8 +20,9 @@ print(sqrt(16))
 import math as m
 print(m.sqrt(16))
 
-from ryan_function import greet, add
+from transfer_file import greet, add
 
+result = add()
 print(greet("Ryan"))
-print(add(5, 3))
+print("The sum is: ", result)
 
