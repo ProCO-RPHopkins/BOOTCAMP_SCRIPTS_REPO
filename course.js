@@ -59,16 +59,14 @@ Task 3: Run both the consoleStyler and the celebrateStyler functions
 Invoke the consoleStyler() function, with the following arguments:
 
 '#1d5c63'
-
 '#ede6db'
-
 '40px'
-
 'Congrats!'
 
 Next, invoke the celebrateStyler() function, with the following argument:
 
 'birthday'
+
 Task 4: Insert a congratulatory and custom message
 Code another function, named styleAndCelebrate().
 The function declaration's body should consist of two function invocations:
